@@ -29,7 +29,7 @@ const routes: Routes = [
     path: 'search',
     children: [
       { path: '', component: FormComponent },
-      { path: ':id', component: FormComponent },
+      { path: ':config', component: FormComponent },
     ]
   },
 ];

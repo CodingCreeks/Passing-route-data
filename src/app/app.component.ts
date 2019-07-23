@@ -14,13 +14,13 @@ export class AppComponent implements OnInit {
   constructor(public router: Router, public activatedRoute: ActivatedRoute) {}
 
   ngOnInit() {
-    this.state$ = this.router.events.pipe(
-      filter(e => e instanceof NavigationStart),
-      map(() => {
-        const currentNav = this.router.getCurrentNavigation();
-        return currentNav.extras.state;
-      })
-    );
+    // this.state$ = this.router.events.pipe(
+    //   filter(e => e instanceof NavigationStart),
+    //   map(() => {
+    //     const currentNav = this.router.getCurrentNavigation();
+    //     return currentNav.extras.state;
+    //   })
+    // );
   }
 
   go() {
