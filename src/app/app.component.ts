@@ -10,8 +10,14 @@ import { filter, map } from 'rxjs/operators';
 })
 export class AppComponent implements OnInit {
   state$: Observable<object>;
+  configs = [
+    { name: 'searchConfig', link: 'General search' },
+    { name: 'orderConfig', link: 'Order Search' },
+    { name: 'instantConfig', link: 'Instant search' },
+    { name: 'accountConfig', link: 'Accounts' }
+  ];
 
-  constructor(public router: Router, public activatedRoute: ActivatedRoute) {}
+  constructor(public router: Router, public activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
     // this.state$ = this.router.events.pipe(
